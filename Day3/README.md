@@ -31,3 +31,7 @@
 ![api](./screenshots/result7.png)
 ![api](./screenshots/result8.png)
 ![api](./screenshots/result9.png)
+
+
+### casefold()
+casefold() is used for the strict lowercase
