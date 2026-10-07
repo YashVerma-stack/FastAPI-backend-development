@@ -4,6 +4,7 @@ from starlette import status
 from dependencies import db_dependency
 from typing import List
 from models.employee import Employee
+from security import bcrypt_context
 
 router = APIRouter(
     prefix='/employee',
@@ -30,7 +31,7 @@ async def create_new_user(db: db_dependency, user: CreateEmployee):
         username = user.username,
         name = user.name,
         email_id = user.email_id,
-        passsword = user.password,
+        hashedPasssword = bcrypt_context.hash(user.password),
     )
     
     db.add(new_emp)
