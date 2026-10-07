@@ -7,5 +7,5 @@ class Employee(Base):
     name = Column(String, nullable=False)
     username = Column(String, unique=True)
     email_id = Column(String, unique=True)
-    passsword = Column(String)
+    hashedPasssword = Column(String)
     
